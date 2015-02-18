@@ -1,14 +1,14 @@
 ﻿using System.Web.Http.Results;
 using LolBackdoor.Data.SummonerData;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SmurfTracker.Controllers.Apis;
+using NUnit.Framework;
 
 namespace SmurfTrackerTests.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class UnitTest1
     {
-        [TestMethod]
+        [Test]
         public void TestMethod1()
         {
             var summonerController = new SummonerController();
