@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Web.Http.Results;
+﻿using System.Web.Http.Results;
 using LolBackdoor.Data.SummonerData;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SmurfTracker.Controllers.Apis;
