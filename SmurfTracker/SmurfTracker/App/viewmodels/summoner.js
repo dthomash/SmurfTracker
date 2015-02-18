@@ -12,6 +12,8 @@
                 var summoner = response[params.summonerName];
                 that.summonerName = summoner.SummonerName;
                 that.summonerIconId = summoner.SummonerIconId;
+            },function(response) {
+                alert("Search failed");
             });
         };
     };
