@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E57978C-F6DE-4AB3-8474-9C14B76367CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LolBackdoor</RootNamespace>
+    <AssemblyName>LolBackdoor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.7\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apis\ChampionApis\Champion1_2.cs" />
+    <Compile Include="Apis\ILolApi.cs" />
+    <Compile Include="Config\LolApiConfig.cs" />
+    <Compile Include="Apis\ILolApiWithConfig.cs" />
+    <Compile Include="Apis\LolApiReflectionHelper.cs" />
+    <Compile Include="Apis\ChampionApis\ILolChampionApi.cs" />
+    <Compile Include="Apis\GameApis\Game1_3.cs" />
+    <Compile Include="Apis\GameApis\ILolGameApi.cs" />
+    <Compile Include="Apis\LeagueApis\ILolLeagueApi.cs" />
+    <Compile Include="Apis\LeagueApis\League2_5.cs" />
+    <Compile Include="Apis\StaticDataApis\ILolStaticDataApi.cs" />
+    <Compile Include="Apis\StaticDataApis\StaticData1_2.cs" />
+    <Compile Include="Apis\StatusApis\ILolStatusApi.cs" />
+    <Compile Include="Apis\StatusApis\Status1_0.cs" />
+    <Compile Include="Apis\MatchHistoryApis\ILolMatchHistoryApi.cs" />
+    <Compile Include="Apis\MatchHistoryApis\MatchHistory2_2.cs" />
+    <Compile Include="Apis\MatchApis\ILolMatchApi.cs" />
+    <Compile Include="Apis\MatchApis\Match2_2.cs" />
+    <Compile Include="Apis\StatsApis\ILolStatsApi.cs" />
+    <Compile Include="Apis\StatsApis\Stats1_3.cs" />
+    <Compile Include="Apis\SummonerApis\ILolSummonerApi.cs" />
+    <Compile Include="Apis\SummonerApis\Summoner1_4.cs" />
+    <Compile Include="Apis\TeamApis\ILolTeamApi.cs" />
+    <Compile Include="Apis\TeamApis\Team2_4.cs" />
+    <Compile Include="Data\ServerData\LolRealm.cs" />
+    <Compile Include="Data\ServerData\LolShard.cs" />
+    <Compile Include="Data\StaticData\LolChampion.cs" />
+    <Compile Include="Data\StaticData\LolItem.cs" />
+    <Compile Include="Data\StaticData\LolMastery.cs" />
+    <Compile Include="Data\StaticData\LolRune.cs" />
+    <Compile Include="Data\StaticData\LolSummonerSpell.cs" />
+    <Compile Include="Data\SummonerData\LolLeague.cs" />
+    <Compile Include="Data\SummonerData\LolLeagueEntry.cs" />
+    <Compile Include="Data\SummonerData\LolMasteryPage.cs" />
+    <Compile Include="Data\SummonerData\LolMatch.cs" />
+    <Compile Include="Data\SummonerData\LolRankedStats.cs" />
+    <Compile Include="Data\SummonerData\LolRunePage.cs" />
+    <Compile Include="Data\SummonerData\LolSummaryStats.cs" />
+    <Compile Include="Data\SummonerData\LolSummoner.cs" />
+    <Compile Include="Data\SummonerData\LolTeam.cs" />
+    <Compile Include="LolBackdoor.cs" />
+    <Compile Include="Config\LolBackdoorConfig.cs" />
+    <Compile Include="LolServer.cs" />
+    <Compile Include="Config\LolServerConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Riot\RiotException.cs" />
+    <Compile Include="Riot\RiotRequest.cs" />
+    <Compile Include="Riot\RiotResponse.cs" />
+    <Compile Include="ServerApiConfigHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="LolBackdoorConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
