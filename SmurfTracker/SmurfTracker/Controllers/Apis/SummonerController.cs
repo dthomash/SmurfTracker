@@ -16,7 +16,7 @@ namespace SmurfTracker.Controllers.Apis
     [RoutePrefix("api/summoner")]
     public class SummonerController : ApiController
     {
-        public static readonly global::LolBackdoor.LolBackdoor lol = new global::LolBackdoor.LolBackdoor("D:\\MyDocs\\League\\SmurfTracker\\SmurfTracker\\SmurfTracker\\LolBackdoorConfig.xml");
+        public static readonly global::LolBackdoor.LolBackdoor lol = new global::LolBackdoor.LolBackdoor("LolBackdoorConfig.xml");
         private ISummonerApiController summonerApiController = new SummonerApiController();
 
         [ResponseType(typeof(LolSummoner))]
