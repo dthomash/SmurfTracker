@@ -1,6 +1,8 @@
 language: csharp
 solution: SmurfTracker/SmurfTracker.sln
 install:
+  - nuget restore SmurfTracker/SmurfTracker.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe SmurfTracker/SmurfTracker.sln
+  - xbuild /p:Configuration=Release SmurfTracker/SmurfTracker.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe
